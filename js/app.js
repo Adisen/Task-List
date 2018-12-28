@@ -12,6 +12,7 @@ loadEventListeners();
 function loadEventListeners(){
   //DOM load events
   document.addEventListener('DOMContentLoaded', getTasks)
+  
   //Add task event
   form.addEventListener('submit', addTask);
 
@@ -45,10 +46,13 @@ function getTasks(){
     const link = document.createElement('a');
 
     link.className = 'delete-item secondary-content';
+    
     //Add icon html
     link.innerHTML = '<i class="fas fa-remove"></i>';
+    
     //Append the link to li
     li.appendChild(link);
+    
     // Append li to ul
     taskList.appendChild(li);
   });
